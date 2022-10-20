@@ -25,7 +25,7 @@ cd bin/
 最后对比测试结果
 ```
 
-## use tiup tpch ben
+## use tiup tpch bench
 ```
 tiup bench tpch --sf=${sf} --threads=${threads} --host=${host} --port=${port} --password=${password} --db=${db} --check=true --queries='q1,q2,q3,q4,q6,q7,q8,q9,q10,q11,q12,q13,q14,q16,q17,q18,q19,q20,q21,q22' run
 ```
