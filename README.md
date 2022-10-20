@@ -1,6 +1,3 @@
-# bench
-测试 TiPipeline 高并发下的执行效率和 query 的公平执行
-
 ## 配置文件
 `/bin/test.properties`
 
