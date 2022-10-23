@@ -18,6 +18,24 @@ cd bin/
 ./test.sh ${sql_mode}
 ```
 
+## prepare
+```
+测试前记得 compact 一下
+ALTER table ${table} COMPACT TIFLASH REPLICA;
+
+ALTER table big_one    COMPACT TIFLASH REPLICA;
+ALTER table small_one  COMPACT TIFLASH REPLICA;
+
+ALTER table customer  COMPACT TIFLASH REPLICA;
+ALTER table lineitem  COMPACT TIFLASH REPLICA;
+ALTER table nation    COMPACT TIFLASH REPLICA;
+ALTER table orders    COMPACT TIFLASH REPLICA;
+ALTER table part      COMPACT TIFLASH REPLICA;
+ALTER table partsupp  COMPACT TIFLASH REPLICA;
+ALTER table region    COMPACT TIFLASH REPLICA;
+ALTER table supplier  COMPACT TIFLASH REPLICA;
+```
+
 ## bench for TiPipeline
 ```
 首先用 tiup cluster nightly 起一个集群用脚本进行测试
