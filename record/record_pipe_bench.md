@@ -121,3 +121,46 @@ rows = initialize.agg_key_types * initialize.rows_per_key
         - sum = 652126 milliseconds
         - sum = 663651 milliseconds
         - sum = 679477 milliseconds
+
+
+# new record
+## test.concurrency=20 test.round=25
+- sql_mode: join
+    - nightly: 
+        - sum = 57966 milliseconds
+        - sum = 61746 milliseconds
+        - sum = 58826 milliseconds
+    - pipeline:
+        - sum = 53969 milliseconds
+        - sum = 54474 milliseconds
+        - sum = 52739 milliseconds
+## test.concurrency=50 test.round=25
+- sql_mode: join
+    - nightly: 
+        - sum = 341606 milliseconds
+        - sum = 339916 milliseconds
+        - sum = 338723 milliseconds
+    - pipeline: 
+        - sum = 325580 milliseconds
+        - sum = 329393 milliseconds
+        - sum = 321896 milliseconds
+## test.concurrency=100 test.round=25
+- sql_mode: join
+    - nightly: 
+        - sum = 1353480 milliseconds
+        - sum = 1317898 milliseconds
+        - sum = 1313597 milliseconds
+    - pipeline:
+        - sum = 1272500 milliseconds
+        - sum = 1270401 milliseconds
+        - sum = 1249211 milliseconds
+## test.concurrency=200 test.round=25
+- sql_mode: join
+    - nightly: 
+        - sum = 5623459 milliseconds
+        - sum = 5464287 milliseconds
+        - sum = 5557414 milliseconds
+    - pipeline:
+        - sum = 4875731 milliseconds
+        - sum = 4859550 milliseconds
+        - sum = 4864620 milliseconds
